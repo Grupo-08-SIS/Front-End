@@ -1,0 +1,67 @@
+/* Banner Inicial */
+
+.banner_inicial {
+    width: 172vh;
+    height: 80vh;
+    margin-top: 20vh;
+    display: flex;
+}
+
+.banner_esquerda {
+    width: 100vh;
+    height: 80vh;
+}
+
+.texto_principal_banner {
+    width: 100vh;
+    height: 20vh;
+    margin-top: 10vh;
+}
+
+.texto_principal_banner li {
+    font-size: 40px;
+    font-weight: 300;
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+.texto_principal_banner b1 {
+    color: #6417e9;
+    font-weight: 600;
+}
+
+.texto_principal_banner b2 {
+    color: #378388;
+    font-weight: 600;
+}
+
+.texto_menor_banner li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    width: 70vh;
+    margin-left: 10px;
+}
+
+.botão_banner_principal button {
+    width: 25vh;
+    height: 8vh;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(229deg, rgba(19,57,234,1) 0%, rgba(79,31,233,1) 35%, rgba(127,11,233,1) 100%);
+    color: white;
+    font-size: 2vh;
+    border: none;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-top: 10vh;
+    margin-left: 10px;
+}
+
+.botão_banner_principal button:hover {
+    background: linear-gradient(229deg, rgba(19,57,234,0.8) 0%, rgba(79,31,233,0.8) 35%, rgba(127,11,233,0.8) 100%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.banner_direita img {
+    width: 500px;
+    margin-top: 10vh;
+}

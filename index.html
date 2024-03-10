@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>TechForAll</title>
+</head>
+
+<body>
+    <div class="header"> <!--Div do card do menu-->
+        <div class="container"> <!--Conteúdo da navbar-->
+            <img class="logo" src="./imagens/logoLight.png" alt="">
+            <ul class="navbar"> <!--Links do menu-->
+                <li><a href="#">Home</a></li>
+                <li><a href="sobreNos.html">Sobre Nós</a></li>
+                <li><a href="">Serviços</a></li>
+                <li><a href="">Avaliações</a></li>
+                <li><a href="">Fale Conosco</a></li>
+                <li><a href="">Tecnologias</a></li>
+                <button onclick="FacaParte()">Faça Parte</button>
+                <img onclick="Modos()" class="modos" src="./imagens/modolight.png"
+                    alt="Clique para ativar o Modo Escuro">
+            </ul>
+        </div>
+    </div>
+    <div class="banner_inicial">
+        <div class="banner_esquerda">
+            <div class="texto_principal_banner">
+                <li>Empoderando <b1>comunidades</b1> com</li>
+                <li>o poder da <b2>tecnologia</b2>
+                </li>
+            </div>
+            <div class="texto_menor_banner">
+                <li>Junte-se à nossa comunidade e estude conosco de qualquer lugar.</li>
+                <li>Oferecemos atividades e exercícios dinâmicos e práticas que dão um Level Up no seu conhecimento.
+                </li>
+            </div>
+            <div class="botão_banner_principal">
+                <button onclick="FacaParte()">Venha Fazer parte!</button>
+            </div>
+        </div>
+        <div class="banner_direita">
+            <img src="../Front-End/imagens/web-development 1 (1).png" alt="">
+        </div>
+    </div>
+</body>
+<script>
+    function FacaParte() {
+        window.location.href = "formulario.html";
+    }
+
+    // FUNÇÃO PARA DARK E LIGHT MODE
+
+    var modoEscuroAtivado = false;
+
+    function Modos() {
+        var body = document.body;
+        var header = document.querySelector('.header');
+        var imagemModos = document.querySelector('.modos');
+        var tagsA = document.getElementsByTagName('a');
+        var logoModos = document.querySelector('.logo');
+        var liTags = document.querySelectorAll('.texto_principal_banner li, .texto_menor_banner li');
+
+        // Função para adicionar a classe fadeIn
+        function adicionarFadeIn(elemento) {
+            // Verifica se a opacidade não é 0 antes de aplicar a transição
+            if (elemento.style.opacity !== '0') {
+                elemento.style.transition = 'opacity 0.5s ease-in-out';
+            }
+            elemento.style.opacity = 1;
+        }
+
+        // Função para adicionar a classe fadeOut
+        function adicionarFadeOut(elemento) {
+            elemento.style.transition = 'opacity 0.5s ease-in-out';
+            elemento.style.opacity = 0;
+        }
+
+        // Função para trocar a imagem e aplicar a animação de fadeIn e fadeOut
+        function trocarImagemComFade(elemento, novoSrc) {
+            adicionarFadeOut(elemento);
+            setTimeout(function () {
+                elemento.src = novoSrc;
+                adicionarFadeIn(elemento);
+            }, 500);
+        }
+
+        if (!modoEscuroAtivado) {
+            // Mudanças para o modo escuro
+            body.style.backgroundColor = "#212121";
+            header.style.backgroundColor = "#424242";
+
+            for (var i = 0; i < tagsA.length; i++) {
+                tagsA[i].style.color = 'white';
+            }
+
+            for (var j = 0; j < liTags.length; j++) {
+                liTags[j].style.color = 'white';
+            }
+
+            // Troca a imagem e aplica fadeIn e fadeOut
+            trocarImagemComFade(imagemModos, './imagens/mododark.png');
+            trocarImagemComFade(logoModos, './imagens/logoDark.png');
+        } else {
+            // Restaurar ao modo original
+            body.style.backgroundColor = "";
+            header.style.backgroundColor = "";
+
+            for (var i = 0; i < tagsA.length; i++) {
+                tagsA[i].style.color = ''; // Voltar à cor original ou remova esta linha
+            }
+
+            for (var j = 0; j < liTags.length; j++) {
+                liTags[j].style.color = '';
+            }
+
+            // Troca a imagem e aplica fadeIn e fadeOut
+            trocarImagemComFade(imagemModos, './imagens/modolight.png');
+            trocarImagemComFade(logoModos, './imagens/logolight.png');
+        }
+
+        modoEscuroAtivado = !modoEscuroAtivado;
+    }
+
+    // FIM DA FAUNÇÃO DE DARK E LIGHT MODE
+</script>
+
+</html>

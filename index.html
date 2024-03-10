@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/tecnologias.css">
     <title>TechForAll</title>
 </head>
 
@@ -47,6 +48,39 @@
             <img src="../Front-End/imagens/web-development 1 (1).png" alt="">
         </div>
     </div>
+    <div class="nossas_tecnologias">
+        <div class="header_tecnologias">
+            <li>Nossas Tecnologias</li>
+        </div>
+        <div class="ares_tecnologias">
+            <div class="bloco_areas">
+                <li onclick="ChamarFront()" id="frontendLi">Frontend</li>
+            </div>
+            <div class="bloco_areas">
+                <li onclick="ChamarBack()" id="backendLi">Backend</li>
+            </div>
+            <div class="bloco_areas">
+                <li onclick="ChamarBanco()" id="bancoLi">Banco de Dados</li>
+            </div>
+        </div>
+        <div class="imagem_tecnologias">
+            <div class="bloco_imagens">
+                <img class="html_img" src="./imagens/html.png" alt="">
+                <img class="kotlin_img" src="./imagens/kotlin.png" alt="">
+                <img class="mysql_img" src="./imagens/mysql.png" alt="">
+            </div>
+            <div class="bloco_imagens">
+                <img class="js_img" src="./imagens/js.png" alt="">
+                <img class="bootstrap_img" src="./imagens/Bootstrap_logo.svg.png" alt="">
+                <img class="sqlserver" src="./imagens/sqlserver.png" alt="">
+
+            </div>
+            <div class="bloco_imagens">
+                <img class="css_img" src="./imagens/css.webp" alt="">
+                <img class="python_img" src="./imagens/Python.png" alt="">
+            </div>
+        </div>
+    </div>
 </body>
 <script>
     function FacaParte() {
@@ -63,7 +97,7 @@
         var imagemModos = document.querySelector('.modos');
         var tagsA = document.getElementsByTagName('a');
         var logoModos = document.querySelector('.logo');
-        var liTags = document.querySelectorAll('.texto_principal_banner li, .texto_menor_banner li');
+        var liTags = document.querySelectorAll('.texto_principal_banner li, .texto_menor_banner li, .bloco_areas, .header_tecnologias');
 
         // Função para adicionar a classe fadeIn
         function adicionarFadeIn(elemento) {
@@ -127,6 +161,56 @@
     }
 
     // FIM DA FAUNÇÃO DE DARK E LIGHT MODE
+
+    // Função para mostrar/ocultar elementos e ajustar o font-weight dos <li>
+    function toggleElements(classesAMostrar, selectedLiId) {
+        // Iterar sobre todos os elementos
+        document.querySelectorAll('.html_img, .js_img, .css_img, .kotlin_img, .mysql_img, .bootstrap_img, .sqlserver, .python_img')
+            .forEach(function (elemento) {
+                // Mostrar elementos com classes específicas, ocultar os outros
+                elemento.style.display = classesAMostrar.includes('.' + elemento.className) ? 'block' : 'none';
+            });
+
+        // Ajustar o font-weight para os elementos do <li> com base no ID fornecido
+        var liFrontend = document.getElementById('frontendLi');
+        var liBackend = document.getElementById('backendLi');
+        var liBanco = document.getElementById('bancoLi');
+
+        // Define o estilo do elemento com ID 'liFrontend' com base na condição.
+        liFrontend.style.fontWeight = (selectedLiId === 'frontendLi') ? '600' : '400';
+
+        // Define o estilo do elemento com ID 'liBackend' com base na condição.
+        liBackend.style.fontWeight = (selectedLiId === 'backendLi') ? '600' : '400';
+
+        // Define o estilo do elemento com ID 'liBanco' com base na condição.
+        liBanco.style.fontWeight = (selectedLiId === 'bancoLi') ? '600' : '400';
+
+    }
+
+    // Função para filtrar e destacar elementos relacionados ao Back-end
+    function ChamarBack() {
+        var classesAMostrar = ['.kotlin_img', '.bootstrap_img', '.python_img'];
+        toggleElements(classesAMostrar, 'backendLi'); // Passa o ID do <li> correspondente
+    }
+
+    // Função para filtrar e destacar elementos relacionados ao Front-end
+    function ChamarFront() {
+        var classesAMostrar = ['.html_img', '.js_img', '.css_img'];
+        toggleElements(classesAMostrar, 'frontendLi'); // Passa o ID do <li> correspondente
+    }
+
+    // Função para filtrar e destacar elementos relacionados ao Banco de Dados
+    function ChamarBanco() {
+        var classesAMostrar = ['.mysql_img', '.sqlserver'];
+        toggleElements(classesAMostrar, 'bancoLi'); // Passa o ID do <li> correspondente
+    }
+
+
+
+
+
+
+
 </script>
 
 </html>

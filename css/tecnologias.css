@@ -1,0 +1,94 @@
+.nossas_tecnologias {
+    width: 172vh;
+    height: 80vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_tecnologias {
+    width: 172vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.ares_tecnologias {
+    width: 172vh;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bloco_areas {
+    width: 25vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    margin-right: 10px;
+    align-items: end;
+    cursor: pointer;
+    transition-duration: 500ms; /* Ajuste a duração conforme necessário */
+}
+
+.bloco_areas li {
+    transform: scale(1);
+}
+
+.bloco_areas:hover {
+    transform: scale(1.2); /* Ajuste o valor conforme necessário para o tamanho desejado durante o hover */
+}
+
+.imagem_tecnologias {
+    width: 150vh;
+    height: 50vh;
+    margin-top: 20px;
+    margin-left: 11vh;
+    display: flex;
+    justify-content: center;
+}
+
+.bloco_imagens {
+    width: 25vh;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    margin-right: 6vh; 
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.html_img, .js_img, .css_img,
+.kotlin_img, .mysql_img, .bootstrap_img,
+.sqlserver, .python_img {
+    width: 150px;
+    height: 150px;
+}
+
+.kotlin_img, .mysql_img, .bootstrap_img,
+.sqlserver, .python_img {
+    display: none;
+}
+
+.kotlin_img{
+    height: 60px;
+}
+
+.python_img {
+    height: 100px;
+    width: 200px;
+}
+
+.mysql_img{
+    height: 80px;
+}

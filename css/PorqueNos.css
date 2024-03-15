@@ -1,0 +1,133 @@
+/* PORQUENOS.CSS */
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+} */
+
+.container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+
+.headerPorqueNos {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.headerPorqueNos h1 {
+  padding: 0 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  display: inline-block;
+
+}
+
+.separatorPorqueNos {
+  width: 100%;
+  height: 5px; /* Altura do separador ajustada */
+  background: linear-gradient(to right, #a8e6cf, #dcedc1); /* Degrade claro adicionado */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.testimonial {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+.testimonial .image {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.testimonial .image:hover {
+  transform: scale(1.1); /* Aumenta ligeiramente o tamanho ao passar o cursor */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Adiciona um efeito de desfoque ao redor da imagem */
+}
+
+.testimonial .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+  height: 100%;
+  width: 100%;
+}
+.slide p {
+  text-align: center;
+  padding: 0 160px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+.slide .quote-icon {
+  font-size: 30px;
+  color: #7d5b8c;
+}
+.slide .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.details .name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+.details .job {
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+}
+/* swiper button css */
+.nav-btn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transform: translateY(30px);
+  background-color: grey;
+  transition: 0.2s;
+}
+.nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.nav-btn::after,
+.nav-btn::before {
+  font-size: 20px;
+  color: #fff;
+}
+.swiper-pagination-bullet {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.swiper-pagination-bullet-active {
+  background-color: #993399;
+}
+@media screen and (max-width: 768px) {
+  .slide p {
+    padding: 0 20px;
+  }
+  .nav-btn {
+    display: none;
+  }
+}
+
+.stars img {
+  height: 15px;
+}

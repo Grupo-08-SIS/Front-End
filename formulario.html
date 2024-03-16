@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
+
+    <!-- SCRIPTS -->
+    <script src="js/scriptIndex.js"></script>
+</head>
+
+<body>
+    <div class="header"> <!--Div do card do menu-->
+        <div class="container"> <!--Conteúdo da navbar-->
+            <img class="logo" src="./imagens/logoLight.png" alt="">
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobreNos.html">Sobre Nós</a></li>
+                <li><a href="">Serviços</a></li>
+                <li><a href="">Avaliações</a></li>
+                <li><a href="">Fale Conosco</a></li>
+                <li><a href="">Tecnologias</a></li>
+                <button onclick="FacaParte()">Faça Parte</button>
+                <img onclick="Modos()" class="modos" src="./imagens/modolight.png"
+                    alt="Clique para ativar o Modo Escuro">
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left-side">
+            <h2>Transforme sua visão em realidade: solicite nossos serviços hoje!</h2>
+            <img src="caminho/para/sua/imagem.jpg" alt="Imagem">
+        </div>
+        <div class="right-side">
+            <div class="container-formulario">
+                <form action="https://formspree.io/f/mqkrllqk" method="POST" enctype="multipart/form-data">
+                    <label for="nomeInstituicao">Nome Instituição:</label>
+                    <input type="text" id="nomeInstituicao" name="nomeInstituicao" required>
+
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" required>
+
+                    <label for="logradouro">Logradouro:</label>
+                    <input type="text" id="logradouro" name="logradouro" required>
+
+                    <label for="cnpj">CNPJ:</label>
+                    <input type="text" id="cnpj" name="cnpj" required>
+
+                    <label for="emailInstitucional">Email Institucional:</label>
+                    <input type="email" id="emailInstitucional" name="emailInstitucional" required>
+
+                    <label for="telefoneRepresentante">Telefone Institucional:</label>
+                    <input type="tel" id="telefoneRepresentante" name="telefoneRepresentante" required>
+
+                    <label for="representanteLegal">Representante Legal:</label>
+                    <input type="text" id="representanteLegal" name="representanteLegal" required>
+
+                    <label for="emailSolicitante">Email Solicitante:</label>
+                    <input type="email" id="emailSolicitante" name="emailSolicitante" required>
+
+                    <label for="proposta">Proposta:</label>
+                    <textarea id="proposta" name="proposta" rows="2" required></textarea>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<style>
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .left-side {
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    .right-side {
+        flex: 2;
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+
+            fetch("https://formspree.io/f/mqkrllqk", {
+                method: "POST",
+                body: formData,
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Dados do formulário enviados com sucesso:", data);
+                })
+                .catch(error => {
+                    console.error("Erro ao enviar os dados do formulário:", error);
+                });
+        });
+    });
+</script>

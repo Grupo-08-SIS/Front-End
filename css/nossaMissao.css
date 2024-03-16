@@ -22,11 +22,15 @@
 }
 
 .banner_inicial_cima b1 {
-    color: #00be27;
+    background: linear-gradient(90deg, #6AE900, #4F1FE9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .banner_inicial b2 {
-    color: #378388;
+    background: linear-gradient(90deg, #3f7bd6, #ff2e63);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .banner_inicial_baixo {

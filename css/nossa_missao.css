@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --cor-primaria: linear-gradient(30deg, #1339EA, #4F1FE9, #7F0BE9);
+    --cor-secundaria-barra: linear-gradient(180deg, #6AE900, #7F0BE9);
+    --cor-secundaria-texto: linear-gradient(230deg, #6AE900, #7F0BE9);
+
+}
+
+input,
+label {
+    display: block;
+}
+
+label {
+    text-align: start;
+}
+
+/* CLASSES DE UTILIDADE*/
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-pequeno {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*  SEÇÃO NOSSA MISSÃO */
+.secao-nossa-missao-1 {
+    display: flex;
+}
+
+.secao-nossa-missao-2 {
+    display: flex;
+}
+
+.nossa-missao-parte-esquerda {
+    width: 50%;
+}
+
+.nossa-missao-parte-direita {
+    width: 50%;
+}
+
+.nossa-missao-titulo {
+    margin: 1rem auto;
+}
+
+.nossa-missao-titulo2 {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nossa-missao-texto {
+    width: 90%;
+    font-size: 1rem;
+    color: #636363;
+}
+
+.nossa-missao-texto2 {
+    width: 90%;
+    font-size: 1rem;
+    color: #636363;
+    margin-left: 1rem;
+}
+
+.avaliacao-nossa-missao {
+    width: 85%;
+    margin: 1rem;
+    position: relative;
+    padding-left: 1em;
+    border-left: 0.2em solid black;
+    border-image-source: var(--cor-secundaria-barra);
+    border-image-slice: 1;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    background-image: var(--cor-secundaria-texto);
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pessoa-nossa-missao {
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.textos-pessoa-nossa-missao {
+    display: flex;
+    margin: 0 1rem;
+    flex-direction: column;
+}
+
+.cargo-subtitulo {
+    color: #d4d4d4;
+    font-size: small;
+}
+
+.img-nossa-missao {
+    margin-top: 2rem;
+}

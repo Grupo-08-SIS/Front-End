@@ -73,90 +73,90 @@
 
     var modoEscuroAtivado = false;
 
-function Modos() {
-    var body = document.body;
-    var header = document.querySelector('.header');
-    var imagemModos = document.querySelector('.modos');
-    var tagsA = document.getElementsByTagName('a');
-    var logoModos = document.querySelector('.logo');
-    var liTags = document.querySelectorAll('.texto_principal_banner li, .texto_menor_banner li, .bloco_areas, .header_tecnologias, .headerPorqueNos li');
-    var elementosComTextoBranco = document.querySelectorAll('p, h1, span, label');
+    function Modos() {
+        var body = document.body;
+        var header = document.querySelector('.header');
+        var imagemModos = document.querySelector('.modos');
+        var tagsA = document.getElementsByTagName('a');
+        var logoModos = document.querySelector('.logo');
+        var liTags = document.querySelectorAll('.texto_principal_banner li, .texto_menor_banner li, .bloco_areas, .header_tecnologias, .headerPorqueNos li');
+        var elementosComTextoBranco = document.querySelectorAll('p, h1, span, label');
 
-    // Seleciona o elemento .headerPorqueNos
-    var headerPorqueNos = document.querySelector('.headerPorqueNos');
+        // Seleciona o elemento .headerPorqueNos
+        var headerPorqueNos = document.querySelector('.headerPorqueNos');
 
-    // Função para adicionar a classe fadeIn
-    function adicionarFadeIn(elemento) {
-        elemento.style.transition = 'opacity 0.5s ease-in-out';
-        elemento.style.opacity = 1;
+        // Função para adicionar a classe fadeIn
+        function adicionarFadeIn(elemento) {
+            elemento.style.transition = 'opacity 0.5s ease-in-out';
+            elemento.style.opacity = 1;
+        }
+
+        // Função para adicionar a classe fadeOut
+        function adicionarFadeOut(elemento) {
+            elemento.style.transition = 'opacity 0.5s ease-in-out';
+            elemento.style.opacity = 0;
+        }
+
+        // Função para trocar a imagem e aplicar a animação de fadeIn e fadeOut
+        function trocarImagemComFade(elemento, novoSrc) {
+            adicionarFadeOut(elemento);
+            setTimeout(function () {
+                elemento.src = novoSrc;
+                adicionarFadeIn(elemento);
+            }, 500);
+        }
+
+        // Troca entre o modo claro e escuro
+        modoEscuroAtivado = !modoEscuroAtivado;
+
+        if (modoEscuroAtivado) {
+            // Mudanças para o modo escuro
+            body.style.backgroundColor = "#212121";
+            header.style.backgroundColor = "#424242";
+
+            for (var i = 0; i < tagsA.length; i++) {
+                tagsA[i].style.color = 'white';
+            }
+
+            for (var j = 0; j < liTags.length; j++) {
+                liTags[j].style.color = 'white';
+            }
+
+            for (var k = 0; k < elementosComTextoBranco.length; k++) {
+                elementosComTextoBranco[k].style.color = 'white';
+            }
+
+            // Troca a imagem e aplica fadeIn e fadeOut
+            trocarImagemComFade(imagemModos, './imagens/mododark.png');
+            trocarImagemComFade(logoModos, './imagens/logoDark.png');
+
+            // Define a cor do texto dentro da div .headerPorqueNos como branco
+            headerPorqueNos.style.color = 'white';
+        } else {
+            // Restaurar ao modo original
+            body.style.backgroundColor = "";
+            header.style.backgroundColor = "";
+
+            for (var i = 0; i < tagsA.length; i++) {
+                tagsA[i].style.color = ''; // Voltar à cor original ou remova esta linha
+            }
+
+            for (var j = 0; j < liTags.length; j++) {
+                liTags[j].style.color = '';
+            }
+
+            for (var k = 0; k < elementosComTextoBranco.length; k++) {
+                elementosComTextoBranco[k].style.color = '';
+            }
+
+            // Troca a imagem e aplica fadeIn e fadeOut
+            trocarImagemComFade(imagemModos, './imagens/modolight.png');
+            trocarImagemComFade(logoModos, './imagens/logolight.png');
+
+            // Define a cor do texto dentro da div .headerPorqueNos de volta à cor original
+            headerPorqueNos.style.color = '';
+        }
     }
-
-    // Função para adicionar a classe fadeOut
-    function adicionarFadeOut(elemento) {
-        elemento.style.transition = 'opacity 0.5s ease-in-out';
-        elemento.style.opacity = 0;
-    }
-
-    // Função para trocar a imagem e aplicar a animação de fadeIn e fadeOut
-    function trocarImagemComFade(elemento, novoSrc) {
-        adicionarFadeOut(elemento);
-        setTimeout(function () {
-            elemento.src = novoSrc;
-            adicionarFadeIn(elemento);
-        }, 500);
-    }
-
-    // Troca entre o modo claro e escuro
-    modoEscuroAtivado = !modoEscuroAtivado;
-
-    if (modoEscuroAtivado) {
-        // Mudanças para o modo escuro
-        body.style.backgroundColor = "#212121";
-        header.style.backgroundColor = "#424242";
-
-        for (var i = 0; i < tagsA.length; i++) {
-            tagsA[i].style.color = 'white';
-        }
-
-        for (var j = 0; j < liTags.length; j++) {
-            liTags[j].style.color = 'white';
-        }
-
-        for (var k = 0; k < elementosComTextoBranco.length; k++) {
-            elementosComTextoBranco[k].style.color = 'white';
-        }
-
-        // Troca a imagem e aplica fadeIn e fadeOut
-        trocarImagemComFade(imagemModos, './imagens/mododark.png');
-        trocarImagemComFade(logoModos, './imagens/logoDark.png');
-
-        // Define a cor do texto dentro da div .headerPorqueNos como branco
-        headerPorqueNos.style.color = 'white';
-    } else {
-        // Restaurar ao modo original
-        body.style.backgroundColor = "";
-        header.style.backgroundColor = "";
-
-        for (var i = 0; i < tagsA.length; i++) {
-            tagsA[i].style.color = ''; // Voltar à cor original ou remova esta linha
-        }
-
-        for (var j = 0; j < liTags.length; j++) {
-            liTags[j].style.color = '';
-        }
-
-        for (var k = 0; k < elementosComTextoBranco.length; k++) {
-            elementosComTextoBranco[k].style.color = '';
-        }
-
-        // Troca a imagem e aplica fadeIn e fadeOut
-        trocarImagemComFade(imagemModos, './imagens/modolight.png');
-        trocarImagemComFade(logoModos, './imagens/logolight.png');
-
-        // Define a cor do texto dentro da div .headerPorqueNos de volta à cor original
-        headerPorqueNos.style.color = '';
-    }
-}
 
 </script>
 

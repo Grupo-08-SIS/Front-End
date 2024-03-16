@@ -12,7 +12,10 @@ function Modos() {
     var imagemModos = document.querySelector('.modos');
     var tagsA = document.getElementsByTagName('a');
     var logoModos = document.querySelector('.logo');
-    var liTags = document.querySelectorAll('.texto_principal_banner li, .texto_menor_banner li, .bloco_areas, .header_tecnologias');
+    var liTags = document.querySelectorAll('.texto_principal_banner li, .texto_menor_banner li, .bloco_areas, .header_tecnologias, .headerPorqueNos li');
+
+    // Seleciona o elemento .headerPorqueNos
+    var headerPorqueNos = document.querySelector('.headerPorqueNos');
 
     // Função para adicionar a classe fadeIn
     function adicionarFadeIn(elemento) {
@@ -25,8 +28,10 @@ function Modos() {
 
     // Função para adicionar a classe fadeOut
     function adicionarFadeOut(elemento) {
-        elemento.style.transition = 'opacity 0.5s ease-in-out';
-        elemento.style.opacity = 0;
+        if (elemento !== null) {
+            elemento.style.transition = 'opacity 0.5s ease-in-out';
+            elemento.style.opacity = 0;
+        }
     }
 
     // Função para trocar a imagem e aplicar a animação de fadeIn e fadeOut
@@ -54,6 +59,9 @@ function Modos() {
         // Troca a imagem e aplica fadeIn e fadeOut
         trocarImagemComFade(imagemModos, './imagens/mododark.png');
         trocarImagemComFade(logoModos, './imagens/logoDark.png');
+
+        // Define a cor do texto dentro da div .headerPorqueNos como branco
+        headerPorqueNos.style.color = 'white';
     } else {
         // Restaurar ao modo original
         body.style.backgroundColor = "";
@@ -70,10 +78,14 @@ function Modos() {
         // Troca a imagem e aplica fadeIn e fadeOut
         trocarImagemComFade(imagemModos, './imagens/modolight.png');
         trocarImagemComFade(logoModos, './imagens/logolight.png');
+
+        // Define a cor do texto dentro da div .headerPorqueNos de volta à cor original
+        headerPorqueNos.style.color = '';
     }
 
     modoEscuroAtivado = !modoEscuroAtivado;
 }
+
 
 // FIM DA FAUNÇÃO DE DARK E LIGHT MODE
 

@@ -3,7 +3,7 @@
 .banner_inicial {
     width: 172vh;
     height: 80vh;
-    margin-top: 20vh;
+    margin-top: 5vh;
     display: flex;
 }
 
@@ -64,4 +64,5 @@
 .banner_direita img {
     width: 500px;
     margin-top: 10vh;
+    
 }

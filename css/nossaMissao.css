@@ -1,0 +1,40 @@
+.banner_inicial {
+    width: 172vh;
+    height: 100vh;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner_inicial_cima {
+    width: 152vh;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+}
+
+.banner_inicial_cima li{
+    text-align:center;
+    font-size: 28px;
+    list-style-type: none;
+    font-weight: 500;
+}
+
+.banner_inicial_cima b1 {
+    color: #00be27;
+}
+
+.banner_inicial b2 {
+    color: #378388;
+}
+
+.banner_inicial_baixo {
+    width: 152vh;
+    height: 100vh;
+    align-items: center;
+}
+
+.banner_inicial_baixo img {
+    margin-left: 12vh;
+}

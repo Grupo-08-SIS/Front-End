@@ -13,7 +13,6 @@
     margin: 1em; /* Adiciona um espaçamento entre as linhas de cards */
   }
   
-  
   h1 {
     width: 100%;
     text-align: center;
@@ -26,6 +25,12 @@
     background: linear-gradient(90deg, #3f7bd6, #ff2e63);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .parte_superior {
+   background-color: #ff2e63;
+   width: 180vh;
+   height: 100vh; 
   }
   
   .card {

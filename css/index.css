@@ -66,3 +66,127 @@
     margin-top: 10vh;
     
 }
+
+/* Começo missão e valores */
+
+#app {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .secao-superior,
+  .secao-inferior {
+    width: 120%;
+    padding: 20px 0px;
+  }
+  
+  #IdImagemValores {
+    width: 400px; 
+  }
+  
+  .secao-superior .container,
+  .secao-inferior .container {
+    display: flex;
+    align-items: center;
+    /* width: 120%; */
+  }
+  
+  .secao-superior .esquerda {
+    padding-right: 20px;
+    max-width: 500px;
+  }
+  
+  .secao-inferior .direita{
+    margin-left: 18vh;
+  }
+  
+  .secao-superior h2,
+  .secao-inferior h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .secao-superior p,
+  .secao-inferior p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .secao-superior blockquote,
+  .secao-inferior blockquote {
+    font-style: italic;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-left: 5px solid #ddd;
+  }
+  
+  .depoimento {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .depoimento img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .depoimento p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  .depoimento p:first-child {
+    font-weight: bold;
+  }
+  
+  .depoimento p:last-child {
+    font-style: italic;
+    color: #ccc;
+  }
+  
+  li {
+    list-style-type: none ;
+    text-decoration: none;
+}
+
+  .informacoes {
+    margin-left: 10px;
+  }
+  
+  .informacoes p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  .informacoes p:first-child {
+    font-weight: bold;
+  }
+  
+  .informacoes p:last-child {
+    font-style: italic;
+    color: #ccc;
+  }
+  
+  .secao-inferior .esquerda img {
+    display: block;
+    margin: 0 auto;
+    width: 362px; 
+    height: 297px;
+    margin-bottom: 20px;
+  }
+
+  .secao-superior .direita img {
+    display: block;
+    margin: 0 auto;
+    width: 362px; 
+    height: 297px;
+    margin-bottom: 20px;
+  }
+
+
+
+/* Fim missão e valores */

@@ -2,317 +2,434 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/tecnologias.css">
-    <link rel="stylesheet" href="./css/PorqueNos.css">
-    <link rel="stylesheet" href="./css/NossaEquipe.css">
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
-     <!-- Font Awesome -->
-     <link
-     rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-   />
-   <!-- Google Font -->
-   <link
-     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
-     rel="stylesheet"
-   />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/tecnologias.css">
+  <link rel="stylesheet" href="./css/nossos_servicos.css">
+  <link rel="stylesheet" href="./css/PorqueNos.css">
+  <link rel="stylesheet" href="./css/NossaEquipe.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
 
 
-    <!-- SCRIPTS -->
-    <script src="js/scriptIndex.js"></script>
-    <script src="js/scriptPorqueNos.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
+  <!-- SCRIPTS -->
+  <script src="js/scriptIndex.js"></script>
 
- <!-- Boxicons CSS -->
-    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <script src="js/swiper-bundle.min.js"></script>
+
+  <!-- Boxicons CSS -->
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 
 
-    <title>TechForAll</title>
+  <title>TechForAll</title>
 </head>
 
 <body>
-    <div class="header"> <!--Div do card do menu-->
-        <div class="container"> <!--Conteúdo da navbar-->
-            <img class="logo" src="./imagens/logoLight.png" alt="">
-            <ul class="navbar"> <!--Links do menu-->
-                <li><a href="#">Home</a></li>
-                <li><a href="sobreNos.html">Sobre Nós</a></li>
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Avaliações</a></li>
-                <li><a href="fale_conosco.html">Fale Conosco</a></li>
-                <li><a href="">Tecnologias</a></li>
-                <button onclick="FacaParte()">Faça Parte</button>
-                <img onclick="Modos()" class="modos" src="./imagens/modolight.png"
-                    alt="Clique para ativar o Modo Escuro">
-            </ul>
-        </div>
+  <div class="header"> <!--Div do card do menu-->
+    <div class="container"> <!--Conteúdo da navbar-->
+      <img class="logo" src="./imagens/logoLight.png" alt="">
+      <ul class="navbar"> <!--Links do menu-->
+        <li><a href="#">Home</a></li>
+        <li><a href="sobreNos.html">Sobre Nós</a></li>
+        <li><a href="">Serviços</a></li>
+        <li><a href="">Avaliações</a></li>
+        <li><a href="fale_conosco.html">Fale Conosco</a></li>
+        <li><a href="">Tecnologias</a></li>
+        <button onclick="FacaParte()">Faça Parte</button>
+        <img onclick="Modos()" class="modos" src="./imagens/modolight.png" alt="Clique para ativar o Modo Escuro">
+      </ul>
     </div>
-    <div class="banner_inicial">
-        <div class="banner_esquerda">
-            <div class="texto_principal_banner">
-                <li>Empoderando <b1>comunidades</b1> com</li>
-                <li>o poder da <b2>tecnologia</b2>
-                </li>
-            </div>
-            <div class="texto_menor_banner">
-                <li>Junte-se à nossa comunidade e estude conosco de qualquer lugar.</li>
-                <li>Oferecemos atividades e exercícios dinâmicos e práticas que dão um Level Up no seu conhecimento.
-                </li>
-            </div>
-            <div class="botão_banner_principal">
-                <button onclick="FacaParte()">Venha Fazer parte!</button>
-            </div>
-        </div>
-        <div class="banner_direita">
-            <img src="../Front-End/imagens/web-development 1 (1).png" alt="">
-        </div>
+  </div>
+  <div class="banner_inicial">
+    <div class="banner_esquerda">
+      <div class="texto_principal_banner">
+        <li>Empoderando <b1>comunidades</b1> com</li>
+        <li>o poder da <b2>tecnologia</b2>
+        </li>
+      </div>
+      <div class="texto_menor_banner">
+        <li>Junte-se à nossa comunidade e estude conosco de qualquer lugar.</li>
+        <li>Oferecemos atividades e exercícios dinâmicos e práticas que dão um Level Up no seu conhecimento.
+        </li>
+      </div>
+      <div class="botão_banner_principal">
+        <button onclick="FacaParte()">Venha Fazer parte!</button>
+      </div>
     </div>
-    <div class="nossas_tecnologias">
-        <div class="header_tecnologias">
-            <li>Nossas Tecnologias</li>
-        </div>
-        <div class="ares_tecnologias">
-            <div class="bloco_areas">
-                <li onclick="ChamarFront()" id="frontendLi">Frontend</li>
-            </div>
-            <div class="bloco_areas">
-                <li onclick="ChamarBack()" id="backendLi">Backend</li>
-            </div>
-            <div class="bloco_areas">
-                <li onclick="ChamarBanco()" id="bancoLi">Banco de Dados</li>
-            </div>
-        </div>
-        <div class="imagem_tecnologias">
-            <div class="bloco_imagens">
-                <img class="html_img" src="./imagens/html.png" alt="">
-                <img class="kotlin_img" src="./imagens/kotlin.png" alt="">
-                <img class="mysql_img" src="./imagens/mysql.png" alt="">
-            </div>
-            <div class="bloco_imagens">
-                <img class="js_img" src="./imagens/js.png" alt="">
-                <img class="bootstrap_img" src="./imagens/Bootstrap_logo.svg.png" alt="">
-                <img class="sqlserver" src="./imagens/sqlserver.png" alt="">
-
-            </div>
-            <div class="bloco_imagens">
-                <img class="css_img" src="./imagens/css.webp" alt="">
-                <img class="python_img" src="./imagens/Python.png" alt="">
-            </div>
-        </div>
+    <div class="banner_direita">
+      <img src="./Front-End/imagens/web-development 1 (1).png" alt="">
     </div>
+  </div>
+  <h1 class="title-container-servico">Nossos Serviços</h1>
+  <div class="swiper-container mySwiper2">
+    <div class="swiper-wrapper">
 
-     <!-- Por que trabalhar conosco -->
-        <div class="testimonial mySwiper">
-            <div class="separatorPorqueNos"></div>
-            <div class="headerPorqueNos">
-                <h1>Por que trabalhar conosco</h1>
-            </div>
-            <div class="testi-content swiper-wrapper">
-                <div class="slide swiper-slide">
-                    <i class="bx bxs-quote-alt-left quote-icon"></i>
-                    <p>
-                        Trabalhar com a equipe da nossa plataforma digital de ensino foi uma experiência verdadeiramente
-                        excepcional! Eles não apenas entregaram uma plataforma de alta qualidade, mas também nos guiaram em cada
-                        etapa do processo de implementação. Sua expertise em desenvolvimento de software e atenção aos detalhes
-                        garantiram que nossa visão se tornasse realidade. Além disso, sua equipe sempre foi receptiva e ágil em
-                        responder às nossas necessidades. Definitivamente merecem cinco estrelas e nossa mais alta recomendação!.
-                    </p>
-
-                    <i class="bx bxs-quote-alt-right quote-icon"></i>
-                    <img src="imagens/img1.jpg" alt="" class="image" />
-
-                    <div class="details">
-                        <span class="name">Marnie Lotter</span>
-                        <span class="job">Web Developer</span>
-                        <div class="stars">
-                            <img src="imagens/download-removebg-preview (1).png" alt="Star">
-                        </div>
-                    </div>
-                </div>
-                <div class="slide swiper-slide">
-
-                    <i class="bx bxs-quote-alt-left quote-icon"></i>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-                        saepe provident dolorem a quaerat quo error facere nihil deleniti
-                        eligendi ipsum adipisci, fugit, architecto amet asperiores
-                        doloremque deserunt eum nemo.
-                    </p>
-
-                    <i class="bx bxs-quote-alt-right quote-icon"></i>
-
-                    <div class="details">
-                        <img src="imagens/img2.jpg" alt="" class="image" />
-                        <span class="name">Kaio Mellark</span>
-                        <span class="job">Quality Assurance</span>
-                        <div class="stars">
-                            <img src="images/download-removebg-preview (1).png" alt="Star">
-                        </div>
-                    </div>
-                </div>
-                <div class="slide swiper-slide">
-                    <i class="bx bxs-quote-alt-left quote-icon"></i>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-                        saepe provident dolorem a quaerat quo error facere nihil deleniti
-                        eligendi ipsum adipisci, fugit, architecto amet asperiores
-                        doloremque deserunt eum nemo.
-                    </p>
-
-                    <i class="bx bxs-quote-alt-right quote-icon"></i>
-
-                    <div class="details">
-                        <img src="imagens/img3.jpg" alt="" class="image" />
-                        <span class="name">Pedro Ambrósio</span>
-                        <span class="job">Professor de Informática</span>
-                        <div class="stars">
-                            <img src="images/download-removebg-preview (1).png" alt="Star">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-button-next nav-btn"></div>
-            <div class="swiper-button-prev nav-btn"></div>
-            <div class="swiper-pagination"></div>
+      <div class="swiper-slide">
+        <div class="circle">
+          <img src="./imagens/Dashboard_perspective_matte.svg" alt="Serviço 1">
         </div>
-    </section>
-
-    <!-- Conheça Nossa Equipe  -->
-    <section>
-        <div class="row">
-            <h1>Conheça <span>Nossa Equipe</span></h1>
+        <div class="card-servico">
+          <h2 class="title-servico">
+            <span>Certificação</span>
+            <span>Personalizáveis</span>
+          </h2>
+          <p class="description">Criação automática de certificados personalizáveis com a cara da sua empresa,
+            agregando valor para sua plataforma e para o currículo de seus alunos. </p>
         </div>
-        <div class="row">
-          <!-- Column 1-->
-          <div class="column">
-            <div class="card">
-              <div class="img-container">
-                <img src="imagens/profile-img-1.png" />
-              </div>
-              <h3>Isabel Bermudes</h3>
-              <p>Product Owner</p>
-              <div class="icons">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#">
-                  <i class="fas fa-envelope"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Column 2-->
-          <div class="column">
-            <div class="card">
-              <div class="img-container">
-                <img src="imagens/profile-img-2.png" />
-              </div>
-              <h3>Brudney Junior</h3>
-              <p>Desenvolvedor</p>
-              <div class="icons">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#">
-                  <i class="fas fa-envelope"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Column 3-->
-          <div class="column">
-            <div class="card">
-              <div class="img-container">
-                <img src="imagens/profile-img-3.png" />
-              </div>
-              <h3>Pedro Primon</h3>
-              <p>Designer</p>
-              <div class="icons">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#">
-                  <i class="fas fa-envelope"></i>
-                </a>
-              </div>
-            </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="circle">
+          <img src="./imagens/Code_perspective_matte.svg" alt="Serviço 2">
+        </div>
+        <div class="card-servico">
+          <h2 class="title-servico">
+            <span>Recurso de</span>
+            <span>Gameficação</span>
+          </h2>
+          <p class="description">Adicionamos intuitividade e dinamicidade aos exercícios, entregando pontuação
+            que além de te ajudar a medir o progresso.</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="circle">
+          <img src="./imagens/Mobile_app_perspective_matte.svg" alt="Serviço 3">
+        </div>
+        <div class="card-servico">
+          <h2 class="title-servico"> 
+            <span>Plataforma Digital</span>
+            <span>Educacional</span>
+          </h2>
+          <p class="description">Já sonhou em ter uma plataforma só sua, onde você tem cadastro, login,
+            integração com suas vídeo aulas e acesso a quem está assistindo-as.</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="circle">
+          <img src="./imagens/Code_perspective_matte.svg" alt="Serviço 4">
+        </div>
+        <div class="card-servico">
+          <h2 class="title-servico">
+            <span>Projetos</span>
+            <span>Práticos e Desafios</span>
+          </h2>
+          <p class="description">
+            A área de Projetos Práticos e Desafios de Codificação oferece uma plataforma interativa para professores e
+            instrutores criarem e compartilharem projetos práticos e desafios.</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="circle">
+          <img src="./imagens/Code_perspective_matte.svg" alt="Serviço 5">
+        </div>
+        <div class="card-servico">
+          <h2 class="title-servico">
+            <span>Comunidade De</span>
+            <span>Aprendizagem</span>
+          </h2>
+          <p class="description">
+            Essa funcionalidade permite que seus alunos possam interagir, compartilhar conhecimentos, colaborar em projetos e
+            discutir temas relevantes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-pagination-container">
+    <div class="swiper-pagination-servico"></div>
+  </div>
+  <div class="nossas_tecnologias">
+    <div class="header_tecnologias">
+      <li>Nossas Tecnologias</li>
+    </div>
+    <div class="ares_tecnologias">
+      <div class="bloco_areas">
+        <li onclick="ChamarFront()" id="frontendLi">Frontend</li>
+      </div>
+      <div class="bloco_areas">
+        <li onclick="ChamarBack()" id="backendLi">Backend</li>
+      </div>
+      <div class="bloco_areas">
+        <li onclick="ChamarBanco()" id="bancoLi">Banco de Dados</li>
+      </div>
+    </div>
+    <div class="imagem_tecnologias">
+      <div class="bloco_imagens">
+        <img class="html_img" src="./imagens/html.png" alt="">
+        <img class="kotlin_img" src="./imagens/kotlin.png" alt="">
+        <img class="mysql_img" src="./imagens/mysql.png" alt="">
+      </div>
+      <div class="bloco_imagens">
+        <img class="js_img" src="./imagens/js.png" alt="">
+        <img class="bootstrap_img" src="./imagens/Bootstrap_logo.svg.png" alt="">
+        <img class="sqlserver" src="./imagens/sqlserver.png" alt="">
+
+      </div>
+      <div class="bloco_imagens">
+        <img class="css_img" src="./imagens/css.webp" alt="">
+        <img class="python_img" src="./imagens/Python.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Por que trabalhar conosco -->
+  <div class="testimonial mySwiper">
+    <div class="separatorPorqueNos"></div>
+    <div class="headerPorqueNos">
+      <h1>Por que trabalhar conosco</h1>
+    </div>
+    <div class="testi-content swiper-wrapper">
+      <div class="slide swiper-slide">
+        <i class="bx bxs-quote-alt-left quote-icon"></i>
+        <p>
+          Trabalhar com a equipe da nossa plataforma digital de ensino foi uma experiência verdadeiramente
+          excepcional! Eles não apenas entregaram uma plataforma de alta qualidade, mas também nos guiaram em cada
+          etapa do processo de implementação. Sua expertise em desenvolvimento de software e atenção aos detalhes
+          garantiram que nossa visão se tornasse realidade. Além disso, sua equipe sempre foi receptiva e ágil em
+          responder às nossas necessidades. Definitivamente merecem cinco estrelas e nossa mais alta recomendação!.
+        </p>
+
+        <i class="bx bxs-quote-alt-right quote-icon"></i>
+        <img src="imagens/img1.jpg" alt="" class="image" />
+
+        <div class="details">
+          <span class="name">Marnie Lotter</span>
+          <span class="job">Web Developer</span>
+          <div class="stars">
+            <img src="imagens/download-removebg-preview (1).png" alt="Star">
           </div>
         </div>
-        <div class="row">
-          <!-- Column 1-->
-          <div class="column">
-            <div class="card">
-              <div class="img-container">
-                <img src="imagens/profile-img-2.png" />
-              </div>
-              <h3>Rafael Cebrian</h3>
-              <p>Desenvolvedor</p>
-              <div class="icons">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#">
-                  <i class="fas fa-envelope"></i>
-                </a>
-              </div>
-            </div>
+      </div>
+      <div class="slide swiper-slide">
+
+        <i class="bx bxs-quote-alt-left quote-icon"></i>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+          saepe provident dolorem a quaerat quo error facere nihil deleniti
+          eligendi ipsum adipisci, fugit, architecto amet asperiores
+          doloremque deserunt eum nemo.
+        </p>
+
+        <i class="bx bxs-quote-alt-right quote-icon"></i>
+
+        <div class="details">
+          <img src="imagens/img2.jpg" alt="" class="image" />
+          <span class="name">Kaio Mellark</span>
+          <span class="job">Quality Assurance</span>
+          <div class="stars">
+            <img src="images/download-removebg-preview (1).png" alt="Star">
           </div>
-          <!-- Column 2-->
-          <div class="column">
-            <div class="card">
-              <div class="img-container">
-                <img src="imagens/profile-img-2.png" />
-              </div>
-              <h3>Edson Morro</h3>
-              <p>Quality Assurance</p>
-              <div class="icons">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#">
-                  <i class="fas fa-envelope"></i>
-                </a>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="slide swiper-slide">
+        <i class="bx bxs-quote-alt-left quote-icon"></i>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+          saepe provident dolorem a quaerat quo error facere nihil deleniti
+          eligendi ipsum adipisci, fugit, architecto amet asperiores
+          doloremque deserunt eum nemo.
+        </p>
+
+        <i class="bx bxs-quote-alt-right quote-icon"></i>
+
+        <div class="details">
+          <img src="imagens/img3.jpg" alt="" class="image" />
+          <span class="name">Pedro Ambrósio</span>
+          <span class="job">Professor de Informática</span>
+          <div class="stars">
+            <img src="images/download-removebg-preview (1).png" alt="Star">
           </div>
-      </section>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next nav-btn"></div>
+    <div class="swiper-button-prev nav-btn"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+  </section>
+
+  <!-- Conheça Nossa Equipe  -->
+  <section>
+    <div class="row">
+      <h1>Conheça <span>Nossa Equipe</span></h1>
+    </div>
+    <div class="row">
+      <!-- Column 1-->
+      <div class="column">
+        <div class="card">
+          <div class="img-container">
+            <img src="imagens/profile-img-1.png" />
+          </div>
+          <h3>Isabel Bermudes</h3>
+          <p>Product Owner</p>
+          <div class="icons">
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Column 2-->
+      <div class="column">
+        <div class="card">
+          <div class="img-container">
+            <img src="imagens/profile-img-2.png" />
+          </div>
+          <h3>Brudney Junior</h3>
+          <p>Desenvolvedor</p>
+          <div class="icons">
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Column 3-->
+      <div class="column">
+        <div class="card">
+          <div class="img-container">
+            <img src="imagens/profile-img-3.png" />
+          </div>
+          <h3>Pedro Primon</h3>
+          <p>Designer</p>
+          <div class="icons">
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Column 1-->
+      <div class="column">
+        <div class="card">
+          <div class="img-container">
+            <img src="imagens/profile-img-2.png" />
+          </div>
+          <h3>Rafael Cebrian</h3>
+          <p>Desenvolvedor</p>
+          <div class="icons">
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Column 2-->
+      <div class="column">
+        <div class="card">
+          <div class="img-container">
+            <img src="imagens/profile-img-2.png" />
+          </div>
+          <h3>Edson Morro</h3>
+          <p>Quality Assurance</p>
+          <div class="icons">
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+  </section>
 
 </body>
+<style>
+  .swiper-pagination-bullet {
+    background-color: #7F0BE9;
+  }
+</style>
+<script>
+
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    grabCursor: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  })
+
+  var swiper2 = new Swiper(".mySwiper2", {
+    slidesPerView: 3,
+    spaceBetween: 60, // Ajuste o valor conforme necessário para criar espaço entre os slides
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    effect: 'slide', // Efeito de transição de slide padrão
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination-servico",
+      clickable: true,
+    },
+  });
+
+</script>
+
 </html>

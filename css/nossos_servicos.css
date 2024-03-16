@@ -1,0 +1,113 @@
+.mySwiper2 {
+    height: 50vh;
+    width: 80vw;
+    max-width: 70vw;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 2.5%;
+}
+
+.mySwiper2 .swiper-slide {
+    background-color: #fff;
+    border-radius: 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    position: relative;
+    width: 320px;
+    height: 370px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: grab;
+}
+
+.mySwiper2 .swiper-slide:hover {
+    cursor: grabbing;
+}
+
+.mySwiper2 .swiper-slide .circle {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #7F0BE9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mySwiper2 .swiper-slide .circle img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.mySwiper2 .swiper-slide-next,
+.swiper-slide-prev {
+    transform: scale(0.8);
+}
+
+.mySwiper2 .swiper-slide-active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid transparent;
+    border-image: linear-gradient(90deg, #6AE900, #7F0BE9);
+    border-image-slice: 1;
+    border-radius: 6%;
+}
+
+/* Estilos do conteúdo dentro dos slides */
+.mySwiper2 .swiper-slide .card-servico {
+    position: absolute;
+    top: 110px;
+    margin: 0 30px;
+    text-align: left;
+}
+
+.title-container-servico {
+    position: relative;
+    font-size: 40px;
+    color: black
+}
+
+.title-servico span {
+    display: block;
+}
+.title-servico span:first-child {
+    color: #6AE900;
+}
+
+.title-servico span:last-child {
+    color: #7F0BE9;
+}
+.title-servico {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.mySwiper2 .description {
+    font-size: 15px;
+    color: #4A5568;
+    margin-top: 20px;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.swiper-pagination-container {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6%;
+  }
+  

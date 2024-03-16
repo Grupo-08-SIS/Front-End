@@ -12,10 +12,17 @@ function Modos() {
     var imagemModos = document.querySelector('.modos');
     var tagsA = document.getElementsByTagName('a');
     var logoModos = document.querySelector('.logo');
-    var liTags = document.querySelectorAll('.texto_principal_banner li, .texto_menor_banner li, .bloco_areas, .header_tecnologias, .headerPorqueNos li');
+    var liTags = document.querySelectorAll('.texto_principal_banner li, .texto_menor_banner li, .bloco_areas, .header_tecnologias, .headerPorqueNos li, .secao-superior li, .secao-inferior li, .footer li');
+    var h1TitleServico = document.querySelector('.title-container-servico');
+
+    // Seleciona o elemento <span> com a classe SpanContato
+    var spanContato = document.querySelector('.SpanContato');
 
     // Seleciona o elemento .headerPorqueNos
     var headerPorqueNos = document.querySelector('.headerPorqueNos');
+
+    // Seleciona o elemento .testi-content
+    var testiContent = document.querySelector('.testi-content');
 
     // Função para adicionar a classe fadeIn
     function adicionarFadeIn(elemento) {
@@ -43,7 +50,10 @@ function Modos() {
         }, 500);
     }
 
-    if (!modoEscuroAtivado) {
+    // Alterna entre o modo claro e escuro
+    modoEscuroAtivado = !modoEscuroAtivado;
+
+    if (modoEscuroAtivado) {
         // Mudanças para o modo escuro
         body.style.backgroundColor = "#212121";
         header.style.backgroundColor = "#424242";
@@ -56,12 +66,30 @@ function Modos() {
             liTags[j].style.color = 'white';
         }
 
+        // Define a cor do texto da tag h1 para branco
+        h1TitleServico.style.color = 'white';
+
+        // Define a cor do texto do span para branco
+        spanContato.style.color = 'white';
+
         // Troca a imagem e aplica fadeIn e fadeOut
         trocarImagemComFade(imagemModos, './imagens/mododark.png');
         trocarImagemComFade(logoModos, './imagens/logoDark.png');
 
         // Define a cor do texto dentro da div .headerPorqueNos como branco
         headerPorqueNos.style.color = 'white';
+
+        // Adiciona cor branca aos textos dentro dos elementos .headerPorqueNos e .testi-content
+        var elementosBrancosHeader = document.querySelectorAll('.headerPorqueNos *');
+        for (var k = 0; k < elementosBrancosHeader.length; k++) {
+            elementosBrancosHeader[k].style.color = 'white';
+        }
+
+        var elementosBrancosTesti = document.querySelectorAll('.testi-content *');
+        for (var l = 0; l < elementosBrancosTesti.length; l++) {
+            elementosBrancosTesti[l].style.color = 'white';
+        }
+
     } else {
         // Restaurar ao modo original
         body.style.backgroundColor = "";
@@ -75,16 +103,33 @@ function Modos() {
             liTags[j].style.color = '';
         }
 
+        // Define a cor do texto da tag h1 de volta à cor original
+        h1TitleServico.style.color = '';
+
+        // Define a cor do texto do span de volta à cor original
+        spanContato.style.color = '';
+
         // Troca a imagem e aplica fadeIn e fadeOut
         trocarImagemComFade(imagemModos, './imagens/modolight.png');
         trocarImagemComFade(logoModos, './imagens/logolight.png');
 
         // Define a cor do texto dentro da div .headerPorqueNos de volta à cor original
         headerPorqueNos.style.color = '';
-    }
 
-    modoEscuroAtivado = !modoEscuroAtivado;
+        // Remove a cor branca dos textos dentro dos elementos .headerPorqueNos e .testi-content
+        var elementosBrancosHeader = document.querySelectorAll('.headerPorqueNos *');
+        for (var k = 0; k < elementosBrancosHeader.length; k++) {
+            elementosBrancosHeader[k].style.color = '';
+        }
+
+        var elementosBrancosTesti = document.querySelectorAll('.testi-content *');
+        for (var l = 0; l < elementosBrancosTesti.length; l++) {
+            elementosBrancosTesti[l].style.color = '';
+        }
+    }
 }
+
+
 
 
 // FIM DA FAUNÇÃO DE DARK E LIGHT MODE

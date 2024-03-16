@@ -8,7 +8,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/formulario.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <!-- Google Font -->
@@ -24,10 +26,10 @@
             <img class="logo" src="./imagens/logoLight.png" alt="">
             <ul class="navbar">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="sobreNos.html">Sobre Nós</a></li>
+                <li><a href="Sobre_Nos.html">Sobre Nós</a></li>
                 <li><a href="">Serviços</a></li>
                 <li><a href="">Avaliações</a></li>
-                <li><a href="">Fale Conosco</a></li>
+                <li><a href="fale_conosco.html">Fale Conosco</a></li>
                 <li><a href="">Tecnologias</a></li>
                 <button onclick="FacaParte()">Faça Parte</button>
                 <img onclick="Modos()" class="modos" src="./imagens/modolight.png"
@@ -37,8 +39,8 @@
     </div>
     <div class="container">
         <div class="left-side">
-            <h2>Transforme sua visão em realidade: solicite nossos serviços hoje!</h2>
-            <img src="caminho/para/sua/imagem.jpg" alt="Imagem">
+            <li>Transforme sua <b1>visão em realidade:</b1> solicite nossos serviços hoje!</li>
+            <img src="./imagens/research-and-development.png" alt="Imagem">
         </div>
         <div class="right-side">
             <div class="container-formulario">
@@ -78,58 +80,170 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div class="footer">
+          <div class="footerContainer">
+            <div class="footerContent">
+              <div class="footerMedia">
+                <div class="footerLogo">
+                  <img src="imagens/logoLight.png" width="auto" height="5vh" alt="">
+                  <li><span>Transformando conhecimento em experiências digitais!</span></li>
+                </div>
+                <div class="redes-sociais">
+                  <div class="footerSocialMidia">
+                    <div class="LogosocialMedia"><img src="imagens/facebook-removebg-preview.png" alt=""></div>
+                    <div class="LogosocialMedia"><img src="imagens/instagram-removebg-preview.png" alt=""></div>
+                    <div class="LogosocialMedia"><img src="imagens/linkedin" alt=""></div>
+                    <div class="LogosocialMedia"><img src="imagens/twitter-removebg-preview.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="footerText">
+                <div class="footerInfo">
+                  <h3>Links</h3>
+                  <a href=".html">Home</a>
+                  <a href=".html">Sobre Nós</a>
+                  <a href=".html">Serviços</a>
+                  <a href=".html">Avaliações</a>
+                  <a href=".html">Fale Conosco</a>
+                  <a href=".html">Tecnologias</a>
+                </div>
+                <div class="footerInfo">
+                  <h3>Fale Conosco</h3>
+                  <span class="SpanContato">
+                    Rua Haddock Lobo, 595 -
+                    Cerqueira César, São Paulo -
+                    SP, 01414-001
+                    tech.for.all.0824@gmail.com
+                  </span>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="linha"></div>
+            <br>
+            <div class="footerRights">
+              <li><span>© 2024 Copyright by Tech For All. All rights reserved.</span></li>
+            </div>
+          </div>
+        </div>
+      </footer>
 </body>
 
 </html>
-<style>
-    form {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 400px;
-    }
-
-    label {
-        display: block;
-        margin-bottom: 8px;
-    }
-
-    input,
-    textarea {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 16px;
-        box-sizing: border-box;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    button {
-        background-color: #4caf50;
-        color: #fff;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 20px;
-    }
-
-    .left-side {
-        flex: 1;
-        padding-right: 20px;
-    }
-
-    .right-side {
-        flex: 2;
-    }
-</style>
 <script>
+
+var modoEscuroAtivado = false;
+
+function Modos() {
+    var body = document.body;
+    var header = document.querySelector('.header');
+    var imagemModos = document.querySelector('.modos');
+    var logoModos = document.querySelector('.logo');
+    var liTags = document.querySelectorAll('.left-side li');
+    var spanTags = document.querySelectorAll('span');
+    var aTags = document.querySelectorAll('a');
+    var h3Tags = document.querySelectorAll('h3');
+    var labels = document.querySelectorAll('label');
+    var form = document.querySelector('form');
+
+    // Verifique se os elementos foram encontrados corretamente
+    if (!imagemModos || !logoModos || !form) {
+        console.error("Elementos não encontrados.");
+        return; // Sair da função se os elementos não forem encontrados
+    }
+
+    // Função para trocar a cor de fundo com transição
+    function trocarCorFundoComTransicao(elemento, cor) {
+        if (elemento) {
+            elemento.style.transition = 'background-color 0.5s ease-in-out';
+            elemento.style.backgroundColor = cor;
+        } else {
+            console.error("Elemento inválido.");
+        }
+    }
+
+    // Função para trocar a imagem com fade in/out
+    function trocarImagemComFade(elemento, novoSrc) {
+        if (elemento && novoSrc) {
+            elemento.style.transition = 'opacity 0.5s ease-in-out';
+            elemento.style.opacity = 0;
+            setTimeout(function () {
+                elemento.src = novoSrc;
+                elemento.onload = function () {
+                    elemento.style.opacity = 1;
+                };
+            }, 500);
+        } else {
+            console.error("Elemento da imagem ou caminho da nova imagem inválido.");
+        }
+    }
+
+    // Alterna entre o modo claro e escuro
+    modoEscuroAtivado = !modoEscuroAtivado;
+
+    if (modoEscuroAtivado) {
+        // Mudanças para o modo escuro
+        trocarCorFundoComTransicao(body, "#212121");
+        trocarCorFundoComTransicao(header, "#424242");
+
+        // Troca a imagem
+        trocarImagemComFade(imagemModos, './imagens/mododark.png');
+        trocarImagemComFade(logoModos, './imagens/logoDark.png');
+
+        // Altera a cor do texto das li's, spans, a's e h3's
+        liTags.forEach(function (li) {
+            li.style.color = 'white';
+        });
+        spanTags.forEach(function (span) {
+            span.style.color = 'white';
+        });
+        aTags.forEach(function (a) {
+            a.style.color = 'white';
+        });
+        h3Tags.forEach(function (h3) {
+            h3.style.color = 'white';
+        });
+        labels.forEach(function (label) {
+            label.style.color = 'white';
+        });
+
+        // Altera a cor de fundo do formulário
+        trocarCorFundoComTransicao(form, "#424242");
+    } else {
+        // Restaurar ao modo original
+        trocarCorFundoComTransicao(body, "");
+        trocarCorFundoComTransicao(header, "");
+
+        // Troca a imagem
+        trocarImagemComFade(imagemModos, './imagens/modolight.png');
+        trocarImagemComFade(logoModos, './imagens/logolight.png');
+
+        // Remove a cor do texto das li's, spans, a's e h3's
+        liTags.forEach(function (li) {
+            li.style.color = '';
+        });
+        spanTags.forEach(function (span) {
+            span.style.color = '';
+        });
+        aTags.forEach(function (a) {
+            a.style.color = '';
+        });
+        h3Tags.forEach(function (h3) {
+            h3.style.color = '';
+        });
+        labels.forEach(function (label) {
+            label.style.color = '';
+        });
+
+        // Remove a cor de fundo do formulário
+        trocarCorFundoComTransicao(form, "");
+    }
+}
+
+
+
+
     document.addEventListener("DOMContentLoaded", function () {
         const form = document.querySelector("form");
 
@@ -151,4 +265,6 @@
                 });
         });
     });
+
+
 </script>

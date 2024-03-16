@@ -90,6 +90,12 @@ function Modos() {
             elementosBrancosTesti[l].style.color = 'white';
         }
 
+        // Define a cor do texto das tags h3 para branco
+        var h3Tags = document.querySelectorAll('h3');
+        for (var m = 0; m < h3Tags.length; m++) {
+            h3Tags[m].style.color = 'white';
+        }
+
     } else {
         // Restaurar ao modo original
         body.style.backgroundColor = "";
@@ -126,10 +132,14 @@ function Modos() {
         for (var l = 0; l < elementosBrancosTesti.length; l++) {
             elementosBrancosTesti[l].style.color = '';
         }
+
+        // Define a cor do texto das tags h3 de volta à cor original
+        var h3Tags = document.querySelectorAll('h3');
+        for (var m = 0; m < h3Tags.length; m++) {
+            h3Tags[m].style.color = '';
+        }
     }
 }
-
-
 
 
 // FIM DA FAUNÇÃO DE DARK E LIGHT MODE
